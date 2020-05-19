@@ -1,0 +1,9 @@
+<map id="Matriz::Matriz" name="Matriz::Matriz">
+<area shape="rect" id="node2" href="$classMatriz.html#aa929f933e9088dc0efecaa9a46d555d9" title="Change the matrix&#39;s dimensions. " alt="" coords="164,5,315,32"/>
+<area shape="rect" id="node3" href="$classMatriz.html#a6b18342f8c083baece693ff41185a206" title="Get the rows object. " alt="" coords="175,56,304,83"/>
+<area shape="rect" id="node4" href="$classMatriz.html#ad6915f9b31f93230a3ce05d01d23a47b" title="Get the cols object. " alt="" coords="177,107,301,133"/>
+<area shape="rect" id="node5" href="$classMatriz.html#a3641ea6e8f91cffd9073c22a71082cf8" title="Set the position object. " alt="" coords="165,157,314,184"/>
+<area shape="rect" id="node6" href="$classMatriz.html#aaf1b9c3af2d3b269cc0a2dda08aebd61" title="Get the position object. " alt="" coords="164,208,315,235"/>
+<area shape="rect" id="node7" href="$classMatriz.html#ae0fd5f42c3797c8d4b85c1d6701e0e7e" title="Print the matrix. " alt="" coords="188,259,291,285"/>
+<area shape="rect" id="node8" href="$classMatriz.html#a5516a9b9524e4604d4b3040628be50e9" title="Operator [] overload. " alt="" coords="172,309,307,336"/>
+</map>

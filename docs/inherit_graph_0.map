@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classAlgorithm.html" title="virtual algorithm class used to solve the maxmean problem " alt="" coords="5,56,92,83"/>
+<area shape="rect" id="node2" href="$classgreedyAlgorithm.html" title="Implementation of the greedy algorithm to solve Maximum diversity problem. " alt="" coords="164,5,295,32"/>
+<area shape="rect" id="node3" href="$classlocalSearch.html" title="Implementation of the Local Search algorithm. " alt="" coords="181,56,278,83"/>
+<area shape="rect" id="node4" href="$classsecondGreedyAlgorithm.html" title="Another implementation of the greedy algorithm to solve Maximum diversity problem. " alt="" coords="140,107,319,133"/>
+</map>
