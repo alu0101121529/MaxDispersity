@@ -1,0 +1,20 @@
+<map id="Matriz::get_cols" name="Matriz::get_cols">
+<area shape="rect" id="node2" href="$classMatriz.html#a388709cfee356a0c78b66e3f538e9318" title="Construct a new Matriz object. " alt="" coords="219,5,330,32"/>
+<area shape="rect" id="node3" href="$classsecondGreedyAlgorithm.html#a95e094bd3f2ee22127eaaf734c2cee8a" title="Method that calculates the gravity center. " alt="" coords="185,57,364,98"/>
+<area shape="rect" id="node6" href="$classsecondGreedyAlgorithm.html#ad34d30fcba1f3d71dc67ea6b12d5d0b8" title="Returns the index of the closest element to the center. " alt="" coords="185,122,364,163"/>
+<area shape="rect" id="node7" href="$classsecondGreedyAlgorithm.html#a72574b0ef83083f7994af0eb4007cf39" title="Calculates the distance between two points. " alt="" coords="185,218,364,259"/>
+<area shape="rect" id="node9" href="$classgreedyAlgorithm.html#a1ba2f9ae707c3d68f0af86ea320f80cf" title="Method that calculates the gravity center. " alt="" coords="182,283,367,325"/>
+<area shape="rect" id="node12" href="$classgreedyAlgorithm.html#afb8dddb24fefb88da82011db8c07e17c" title="Returns the index of the furthest element to the center. " alt="" coords="179,349,370,390"/>
+<area shape="rect" id="node13" href="$classgreedyAlgorithm.html#a59dd977d1c232276b8494de999e415d4" title="Calculates the distance between two points. " alt="" coords="177,435,372,477"/>
+<area shape="rect" id="node15" href="$classlocalSearch.html#a5e85839cfb397c2ee38fa38bfbbc4151" title="Calculates the distance between two points. " alt="" coords="182,537,367,578"/>
+<area shape="rect" id="node4" href="$classsecondGreedyAlgorithm.html#acbb57b3cc5b088ee401be24841e10eef" title="Construct a new secondGreedyAlgorithm object. " alt="" coords="725,115,912,157"/>
+<area shape="rect" id="node5" href="$classsecondGreedyAlgorithm.html#a119a730116003d00438179ccf4e2cafd" title="Method that executes the algorithm. " alt="" coords="444,57,623,98"/>
+<area shape="rect" id="node8" href="$classsecondGreedyAlgorithm.html#a21a936acf628b02184e745faf918618a" title="Method that computes the total distance given a solution. " alt="" coords="444,225,623,266"/>
+<area shape="rect" id="node10" href="$classgreedyAlgorithm.html#ad2ec161ba440c1a8f35b26823e37ca6b" title="Construct a new greedy Algorithm object. " alt="" coords="695,392,943,419"/>
+<area shape="rect" id="node11" href="$classgreedyAlgorithm.html#a37c81600b24a32ae25b6f0eeab643a7a" title="Method that executes the algorithm. " alt="" coords="438,341,629,368"/>
+<area shape="rect" id="node14" href="$classgreedyAlgorithm.html#a523e81ad05f34731d5259e712b0b6ee5" title="Method that computes the total distance given a solution. " alt="" coords="420,493,647,520"/>
+<area shape="rect" id="node16" href="$classlocalSearch.html#a30b47bf0168e1ad75f42868780de1f96" title="Construct a new localSearch object. " alt="" coords="1196,620,1376,647"/>
+<area shape="rect" id="node17" href="$classlocalSearch.html#a0b14e5f24760de3ea567ff507d3a2ece" title="Method that computes the total distance given a solution. " alt="" coords="437,620,629,647"/>
+<area shape="rect" id="node18" href="$classlocalSearch.html#a0ac1d7bf221f1ab7af92f1a91017cf02" title="Method that executes the algorithm. " alt="" coords="991,645,1148,672"/>
+<area shape="rect" id="node19" href="$classlocalSearch.html#afe2b71349ac06285bdccaf85847650c0" title="Returns the a vector with the improved solution after applying the local search algorithm. " alt="" coords="751,697,887,738"/>
+</map>

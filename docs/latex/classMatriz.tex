@@ -1,0 +1,301 @@
+\hypertarget{classMatriz}{}\section{Matriz Class Reference}
+\label{classMatriz}\index{Matriz@{Matriz}}
+
+
+Matrix containing all the distances between nodes.  
+
+
+
+
+{\ttfamily \#include $<$Matrix.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMatriz_a388709cfee356a0c78b66e3f538e9318}{Matriz} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Construct a new \hyperlink{classMatriz}{Matriz} object. \end{DoxyCompactList}\item 
+void \hyperlink{classMatriz_aa929f933e9088dc0efecaa9a46d555d9}{resize\+Matrix} (int rows, int cols)
+\begin{DoxyCompactList}\small\item\em Change the matrix\textquotesingle{}s dimensions. \end{DoxyCompactList}\item 
+int \hyperlink{classMatriz_a6b18342f8c083baece693ff41185a206}{get\+\_\+rows} ()
+\begin{DoxyCompactList}\small\item\em Get the rows object. \end{DoxyCompactList}\item 
+int \hyperlink{classMatriz_ad6915f9b31f93230a3ce05d01d23a47b}{get\+\_\+cols} ()
+\begin{DoxyCompactList}\small\item\em Get the cols object. \end{DoxyCompactList}\item 
+void \hyperlink{classMatriz_a3641ea6e8f91cffd9073c22a71082cf8}{set\+\_\+position} (int row, int col, float value)
+\begin{DoxyCompactList}\small\item\em Set the position object. \end{DoxyCompactList}\item 
+float \hyperlink{classMatriz_aaf1b9c3af2d3b269cc0a2dda08aebd61}{get\+\_\+position} (int row, int col)
+\begin{DoxyCompactList}\small\item\em Get the position object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMatriz_ae0fd5f42c3797c8d4b85c1d6701e0e7e}\label{classMatriz_ae0fd5f42c3797c8d4b85c1d6701e0e7e}} 
+void \hyperlink{classMatriz_ae0fd5f42c3797c8d4b85c1d6701e0e7e}{write} ()
+\begin{DoxyCompactList}\small\item\em Print the matrix. \end{DoxyCompactList}\item 
+std\+::vector$<$ float $>$ \& \hyperlink{classMatriz_a5516a9b9524e4604d4b3040628be50e9}{operator\mbox{[}$\,$\mbox{]}} (int index)
+\begin{DoxyCompactList}\small\item\em Operator \mbox{[}\mbox{]} overload. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMatriz_afa298e352ed08188e16edf49fc49fcc2}\label{classMatriz_afa298e352ed08188e16edf49fc49fcc2}} 
+void {\bfseries print\+Row} (int index)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Matrix containing all the distances between nodes. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMatriz_a388709cfee356a0c78b66e3f538e9318}\label{classMatriz_a388709cfee356a0c78b66e3f538e9318}} 
+\index{Matriz@{Matriz}!Matriz@{Matriz}}
+\index{Matriz@{Matriz}!Matriz@{Matriz}}
+\subsubsection{\texorpdfstring{Matriz()}{Matriz()}}
+{\footnotesize\ttfamily Matriz\+::\+Matriz (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \hyperlink{classMatriz}{Matriz} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \{std\+::string\}} & filename \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+36                              : matrix(0, std::vector<float>(0))
+37   \{
+38     std::ifstream myFile;
+39     myFile.open(filename);
+40     \textcolor{keywordtype}{int} numeroElementos = 0;
+41     \textcolor{keywordtype}{int} dimensionElementos = 0;
+42     \textcolor{keywordtype}{float} valores = 0;
+43     \textcolor{keywordflow}{if} (myFile.is\_open())
+44     \{
+45       myFile >> numeroElementos;
+46       myFile >> dimensionElementos;
+47     \}
+48     this->\hyperlink{classMatriz_aa929f933e9088dc0efecaa9a46d555d9}{resizeMatrix}(numeroElementos, dimensionElementos);
+49     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < numeroElementos; i++)
+50     \{
+51       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < dimensionElementos; j++)
+52       \{
+53         matrix[i][j] = 0;
+54       \}
+55     \}
+56     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < numeroElementos; i++)
+57     \{
+58       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < dimensionElementos; j++)
+59       \{
+60           myFile >> valores;
+61           matrix[i][j] = valores;
+62       \}
+63     \}
+64     myFile.close();
+65   \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{classMatriz_a388709cfee356a0c78b66e3f538e9318_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMatriz_ad6915f9b31f93230a3ce05d01d23a47b}\label{classMatriz_ad6915f9b31f93230a3ce05d01d23a47b}} 
+\index{Matriz@{Matriz}!get\+\_\+cols@{get\+\_\+cols}}
+\index{get\+\_\+cols@{get\+\_\+cols}!Matriz@{Matriz}}
+\subsubsection{\texorpdfstring{get\+\_\+cols()}{get\_cols()}}
+{\footnotesize\ttfamily int Matriz\+::get\+\_\+cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the cols object. 
+
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+18 \{
+19   \textcolor{keywordflow}{return} matrix[0].size();
+20 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMatriz_ad6915f9b31f93230a3ce05d01d23a47b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classMatriz_aaf1b9c3af2d3b269cc0a2dda08aebd61}\label{classMatriz_aaf1b9c3af2d3b269cc0a2dda08aebd61}} 
+\index{Matriz@{Matriz}!get\+\_\+position@{get\+\_\+position}}
+\index{get\+\_\+position@{get\+\_\+position}!Matriz@{Matriz}}
+\subsubsection{\texorpdfstring{get\+\_\+position()}{get\_position()}}
+{\footnotesize\ttfamily float Matriz\+::get\+\_\+position (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+
+
+Get the position object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & \\
+\hline
+{\em col} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+28 \{
+29   \textcolor{keywordflow}{return} matrix[row][col];
+30 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{classMatriz_aaf1b9c3af2d3b269cc0a2dda08aebd61_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classMatriz_a6b18342f8c083baece693ff41185a206}\label{classMatriz_a6b18342f8c083baece693ff41185a206}} 
+\index{Matriz@{Matriz}!get\+\_\+rows@{get\+\_\+rows}}
+\index{get\+\_\+rows@{get\+\_\+rows}!Matriz@{Matriz}}
+\subsubsection{\texorpdfstring{get\+\_\+rows()}{get\_rows()}}
+{\footnotesize\ttfamily int Matriz\+::get\+\_\+rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the rows object. 
+
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+13 \{
+14   \textcolor{keywordflow}{return} matrix.size();
+15 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMatriz_a6b18342f8c083baece693ff41185a206_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classMatriz_a5516a9b9524e4604d4b3040628be50e9}\label{classMatriz_a5516a9b9524e4604d4b3040628be50e9}} 
+\index{Matriz@{Matriz}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Matriz@{Matriz}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily std\+::vector$<$ float $>$ \& Matriz\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Operator \mbox{[}\mbox{]} overload. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$float$>$\& 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+45 \{
+46   \textcolor{keywordflow}{if} (index >= matrix.size())
+47   \{
+48     std::cerr << \textcolor{stringliteral}{"Index fuera de rango"} << std::endl;
+49     std::exit(0);
+50   \}
+51   \textcolor{keywordflow}{else}
+52   \{
+53     \textcolor{keywordflow}{return} matrix[index];
+54   \}
+55 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{classMatriz_a5516a9b9524e4604d4b3040628be50e9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classMatriz_aa929f933e9088dc0efecaa9a46d555d9}\label{classMatriz_aa929f933e9088dc0efecaa9a46d555d9}} 
+\index{Matriz@{Matriz}!resize\+Matrix@{resize\+Matrix}}
+\index{resize\+Matrix@{resize\+Matrix}!Matriz@{Matriz}}
+\subsubsection{\texorpdfstring{resize\+Matrix()}{resizeMatrix()}}
+{\footnotesize\ttfamily void Matriz\+::resize\+Matrix (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{cols }\end{DoxyParamCaption})}
+
+
+
+Change the matrix\textquotesingle{}s dimensions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & \\
+\hline
+{\em cols} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+4 \{
+5   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < matrix.size(); i++)
+6   \{
+7     matrix[i].resize(cols);
+8   \}
+9   matrix.resize(rows, std::vector<float>(cols));
+10 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{classMatriz_aa929f933e9088dc0efecaa9a46d555d9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classMatriz_a3641ea6e8f91cffd9073c22a71082cf8}\label{classMatriz_a3641ea6e8f91cffd9073c22a71082cf8}} 
+\index{Matriz@{Matriz}!set\+\_\+position@{set\+\_\+position}}
+\index{set\+\_\+position@{set\+\_\+position}!Matriz@{Matriz}}
+\subsubsection{\texorpdfstring{set\+\_\+position()}{set\_position()}}
+{\footnotesize\ttfamily void Matriz\+::set\+\_\+position (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col,  }\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+Set the position object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & \\
+\hline
+{\em col} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+23 \{
+24   matrix[row][col] = value;
+25 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{classMatriz_a3641ea6e8f91cffd9073c22a71082cf8_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Matrix.\+hpp\item 
+src/Matrix.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,6 @@
+<map id="localSearch::distanceTwoPoints" name="localSearch::distanceTwoPoints">
+<area shape="rect" id="node2" href="$classlocalSearch.html#a30b47bf0168e1ad75f42868780de1f96" title="Construct a new localSearch object. " alt="" coords="868,38,1048,65"/>
+<area shape="rect" id="node3" href="$classlocalSearch.html#a0b14e5f24760de3ea567ff507d3a2ece" title="Method that computes the total distance given a solution. " alt="" coords="239,38,431,65"/>
+<area shape="rect" id="node4" href="$classlocalSearch.html#a0ac1d7bf221f1ab7af92f1a91017cf02" title="Method that executes the algorithm. " alt="" coords="663,63,820,90"/>
+<area shape="rect" id="node5" href="$classlocalSearch.html#afe2b71349ac06285bdccaf85847650c0" title="Returns the a vector with the improved solution after applying the local search algorithm. " alt="" coords="479,115,615,156"/>
+</map>

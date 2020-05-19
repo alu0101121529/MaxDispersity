@@ -1,0 +1,285 @@
+\hypertarget{classlocalSearch}{}\section{local\+Search Class Reference}
+\label{classlocalSearch}\index{local\+Search@{local\+Search}}
+
+
+Implementation of the Local Search algorithm.  
+
+
+
+
+{\ttfamily \#include $<$local\+Search.\+hpp$>$}
+
+
+
+Inheritance diagram for local\+Search\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=153pt]{classlocalSearch__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for local\+Search\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=153pt]{classlocalSearch__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlocalSearch_a30b47bf0168e1ad75f42868780de1f96}{local\+Search} (std\+::string filename, int sol, std\+::vector$<$ int $>$ solution\+Greedy)
+\begin{DoxyCompactList}\small\item\em Construct a new \hyperlink{classlocalSearch}{local\+Search} object. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \hyperlink{classlocalSearch_a0ac1d7bf221f1ab7af92f1a91017cf02}{execute} ()
+\begin{DoxyCompactList}\small\item\em Method that executes the algorithm. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \hyperlink{classlocalSearch_afe2b71349ac06285bdccaf85847650c0}{local\+\_\+\+Search} (std\+::vector$<$ int $>$ solution)
+\begin{DoxyCompactList}\small\item\em Returns the a vector with the improved solution after applying the local search algorithm. \end{DoxyCompactList}\item 
+float \hyperlink{classlocalSearch_a0b14e5f24760de3ea567ff507d3a2ece}{total\+Distance} (std\+::vector$<$ int $>$)
+\begin{DoxyCompactList}\small\item\em Method that computes the total distance given a solution. \end{DoxyCompactList}\item 
+float \hyperlink{classlocalSearch_a5e85839cfb397c2ee38fa38bfbbc4151}{distance\+Two\+Points} (int, int)
+\begin{DoxyCompactList}\small\item\em Calculates the distance between two points. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Implementation of the Local Search algorithm. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlocalSearch_a30b47bf0168e1ad75f42868780de1f96}\label{classlocalSearch_a30b47bf0168e1ad75f42868780de1f96}} 
+\index{local\+Search@{local\+Search}!local\+Search@{local\+Search}}
+\index{local\+Search@{local\+Search}!local\+Search@{local\+Search}}
+\subsubsection{\texorpdfstring{local\+Search()}{localSearch()}}
+{\footnotesize\ttfamily local\+Search\+::local\+Search (\begin{DoxyParamCaption}\item[{std\+::string}]{filename,  }\item[{int}]{sol,  }\item[{std\+::vector$<$ int $>$}]{solution\+Greedy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \hyperlink{classlocalSearch}{local\+Search} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+30 : \hyperlink{classAlgorithm_a3c199c8528aae86f06ac515d5102fa09}{Algorithm}(filename, sol), solutionGreedy(solutionGreedy) \{\}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocalSearch_a30b47bf0168e1ad75f42868780de1f96_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlocalSearch_a5e85839cfb397c2ee38fa38bfbbc4151}\label{classlocalSearch_a5e85839cfb397c2ee38fa38bfbbc4151}} 
+\index{local\+Search@{local\+Search}!distance\+Two\+Points@{distance\+Two\+Points}}
+\index{distance\+Two\+Points@{distance\+Two\+Points}!local\+Search@{local\+Search}}
+\subsubsection{\texorpdfstring{distance\+Two\+Points()}{distanceTwoPoints()}}
+{\footnotesize\ttfamily float local\+Search\+::distance\+Two\+Points (\begin{DoxyParamCaption}\item[{int}]{point1,  }\item[{int}]{point2 }\end{DoxyParamCaption})}
+
+
+
+Calculates the distance between two points. 
+
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+61                                                            \{
+62   \textcolor{keywordtype}{float} sum = 0; 
+63   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < graph.\hyperlink{classMatriz_ad6915f9b31f93230a3ce05d01d23a47b}{get\_cols}(); j++) \{
+64     sum += pow(graph[point1][j] - graph[point2][j], 2);
+65   \}
+66   sum = sqrt(sum);
+67   \textcolor{keywordflow}{return} sum;
+68 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{classlocalSearch_a5e85839cfb397c2ee38fa38bfbbc4151_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocalSearch_a5e85839cfb397c2ee38fa38bfbbc4151_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlocalSearch_a0ac1d7bf221f1ab7af92f1a91017cf02}\label{classlocalSearch_a0ac1d7bf221f1ab7af92f1a91017cf02}} 
+\index{local\+Search@{local\+Search}!execute@{execute}}
+\index{execute@{execute}!local\+Search@{local\+Search}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ local\+Search\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Method that executes the algorithm. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$float$>$ 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAlgorithm_af6ea9eb9a6dbd41896e3fd7dabac096b}{Algorithm}.
+
+
+\begin{DoxyCode}
+3 \{
+4   std::vector<int> solution = solutionGreedy;
+5   \textcolor{keywordtype}{float} distance = \hyperlink{classlocalSearch_a0b14e5f24760de3ea567ff507d3a2ece}{totalDistance}(solution);
+6   \textcolor{keywordtype}{bool} improvement = \textcolor{keyword}{true};
+7   \textcolor{keywordflow}{if}(improvement) \{
+8     std::vector<int> improvedSolution = \hyperlink{classlocalSearch_afe2b71349ac06285bdccaf85847650c0}{local\_Search}(solution);
+9     \textcolor{keywordflow}{if}(\hyperlink{classlocalSearch_a0b14e5f24760de3ea567ff507d3a2ece}{totalDistance}(improvedSolution) > distance) \{
+10       solution = improvedSolution;
+11       distance = \hyperlink{classlocalSearch_a0b14e5f24760de3ea567ff507d3a2ece}{totalDistance}(improvedSolution);
+12     \} \textcolor{keywordflow}{else} \{
+13       improvement = \textcolor{keyword}{false};
+14     \}
+15   \}
+16   \textcolor{keywordflow}{return} solution;
+17 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocalSearch_a0ac1d7bf221f1ab7af92f1a91017cf02_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocalSearch_a0ac1d7bf221f1ab7af92f1a91017cf02_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlocalSearch_afe2b71349ac06285bdccaf85847650c0}\label{classlocalSearch_afe2b71349ac06285bdccaf85847650c0}} 
+\index{local\+Search@{local\+Search}!local\+\_\+\+Search@{local\+\_\+\+Search}}
+\index{local\+\_\+\+Search@{local\+\_\+\+Search}!local\+Search@{local\+Search}}
+\subsubsection{\texorpdfstring{local\+\_\+\+Search()}{local\_Search()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ local\+Search\+::local\+\_\+\+Search (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{solution }\end{DoxyParamCaption})}
+
+
+
+Returns the a vector with the improved solution after applying the local search algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em solution} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$int$>$ 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+21 \{
+22   \textcolor{keywordtype}{float} distance = \hyperlink{classlocalSearch_a0b14e5f24760de3ea567ff507d3a2ece}{totalDistance}(solutionGreedy);
+23   std::vector<int> improved;
+24   std::vector<int> actualSolution = solutionGreedy;
+25   std::vector<int> candidates;
+26   \textcolor{keywordtype}{bool} improv = \textcolor{keyword}{false};
+27   \textcolor{keywordflow}{do} \{
+28     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < solution.size(); i++) \{
+29       \textcolor{keywordflow}{if}(std::find(solution.begin(), solution.end(), i) == solution.end()) \{
+30         candidates.push\_back(i);
+31       \}
+32     \}
+33     improv = \textcolor{keyword}{false};
+34     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < actualSolution.size(); i++) \{
+35       \textcolor{keywordtype}{int} aux = actualSolution[i];
+36       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < candidates.size(); j++) \{
+37         actualSolution[i] = candidates[j];
+38         \textcolor{keywordtype}{float} actualDistance = \hyperlink{classlocalSearch_a0b14e5f24760de3ea567ff507d3a2ece}{totalDistance}(actualSolution);
+39         \textcolor{keywordflow}{if}(actualDistance > distance) \{
+40           distance = actualDistance;
+41           improved = actualSolution;
+42           improv = \textcolor{keyword}{true};
+43         \}
+44       \}
+45       actualSolution[i] = aux;
+46     \}
+47   \} \textcolor{keywordflow}{while}(improv);
+48   \textcolor{keywordflow}{return} improved;
+49 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocalSearch_afe2b71349ac06285bdccaf85847650c0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocalSearch_afe2b71349ac06285bdccaf85847650c0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classlocalSearch_a0b14e5f24760de3ea567ff507d3a2ece}\label{classlocalSearch_a0b14e5f24760de3ea567ff507d3a2ece}} 
+\index{local\+Search@{local\+Search}!total\+Distance@{total\+Distance}}
+\index{total\+Distance@{total\+Distance}!local\+Search@{local\+Search}}
+\subsubsection{\texorpdfstring{total\+Distance()}{totalDistance()}}
+{\footnotesize\ttfamily float local\+Search\+::total\+Distance (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{solution }\end{DoxyParamCaption})}
+
+
+
+Method that computes the total distance given a solution. 
+
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+51                                                         \{
+52   \textcolor{keywordtype}{float} sum = 0;
+53   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < solution.size(); i++) \{
+54     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = i + 1; j < solution.size(); j++) \{
+55       sum += \hyperlink{classlocalSearch_a5e85839cfb397c2ee38fa38bfbbc4151}{distanceTwoPoints}(solution[i], solution[j]);
+56     \}
+57   \}
+58   \textcolor{keywordflow}{return} sum;
+59 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocalSearch_a0b14e5f24760de3ea567ff507d3a2ece_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocalSearch_a0b14e5f24760de3ea567ff507d3a2ece_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{localSearch_8hpp}{local\+Search.\+hpp}\item 
+src/local\+Search.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,113 @@
+\hypertarget{classAlgorithm}{}\section{Algorithm Class Reference}
+\label{classAlgorithm}\index{Algorithm@{Algorithm}}
+
+
+virtual algorithm class used to solve the maxmean problem  
+
+
+
+
+{\ttfamily \#include $<$algorithm.\+hpp$>$}
+
+
+
+Inheritance diagram for Algorithm\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classAlgorithm__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Algorithm\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{classAlgorithm__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAlgorithm_a3c199c8528aae86f06ac515d5102fa09}{Algorithm} (std\+::string filename, int sol)
+\begin{DoxyCompactList}\small\item\em Construct a new \hyperlink{classAlgorithm}{Algorithm} object. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ int $>$ \hyperlink{classAlgorithm_af6ea9eb9a6dbd41896e3fd7dabac096b}{execute} ()=0
+\begin{DoxyCompactList}\small\item\em Method that executes the algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAlgorithm_ac738351f4331aee2fb965f689b7be273}\label{classAlgorithm_ac738351f4331aee2fb965f689b7be273}} 
+\hyperlink{classMatriz}{Matriz} {\bfseries graph}
+\item 
+\mbox{\Hypertarget{classAlgorithm_a605f2288613c21d986485ec0feef6851}\label{classAlgorithm_a605f2288613c21d986485ec0feef6851}} 
+int {\bfseries solution\+Size}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+virtual algorithm class used to solve the maxmean problem 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAlgorithm_a3c199c8528aae86f06ac515d5102fa09}\label{classAlgorithm_a3c199c8528aae86f06ac515d5102fa09}} 
+\index{Algorithm@{Algorithm}!Algorithm@{Algorithm}}
+\index{Algorithm@{Algorithm}!Algorithm@{Algorithm}}
+\subsubsection{\texorpdfstring{Algorithm()}{Algorithm()}}
+{\footnotesize\ttfamily Algorithm\+::\+Algorithm (\begin{DoxyParamCaption}\item[{std\+::string}]{filename,  }\item[{int}]{sol }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \hyperlink{classAlgorithm}{Algorithm} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+36 : graph(filename), solutionSize(sol)\{\};
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classAlgorithm_a3c199c8528aae86f06ac515d5102fa09_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classAlgorithm_af6ea9eb9a6dbd41896e3fd7dabac096b}\label{classAlgorithm_af6ea9eb9a6dbd41896e3fd7dabac096b}} 
+\index{Algorithm@{Algorithm}!execute@{execute}}
+\index{execute@{execute}!Algorithm@{Algorithm}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$int$>$ Algorithm\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Method that executes the algorithm. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$int$>$ 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsecondGreedyAlgorithm_a119a730116003d00438179ccf4e2cafd}{second\+Greedy\+Algorithm}, \hyperlink{classgreedyAlgorithm_a37c81600b24a32ae25b6f0eeab643a7a}{greedy\+Algorithm}, and \hyperlink{classlocalSearch_a0ac1d7bf221f1ab7af92f1a91017cf02}{local\+Search}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classAlgorithm_af6ea9eb9a6dbd41896e3fd7dabac096b_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{algorithm_8hpp}{algorithm.\+hpp}\end{DoxyCompactItemize}

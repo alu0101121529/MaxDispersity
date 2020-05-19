@@ -1,0 +1,6 @@
+<map id="localSearch::execute" name="localSearch::execute">
+<area shape="rect" id="node2" href="$classlocalSearch.html#a0b14e5f24760de3ea567ff507d3a2ece" title="Method that computes the total distance given a solution. " alt="" coords="395,13,587,39"/>
+<area shape="rect" id="node5" href="$classlocalSearch.html#afe2b71349ac06285bdccaf85847650c0" title="Returns the a vector with the improved solution after applying the local search algorithm. " alt="" coords="211,35,347,76"/>
+<area shape="rect" id="node3" href="$classlocalSearch.html#a5e85839cfb397c2ee38fa38bfbbc4151" title="Calculates the distance between two points. " alt="" coords="635,5,820,47"/>
+<area shape="rect" id="node4" href="$classMatriz.html#ad6915f9b31f93230a3ce05d01d23a47b" title="Get the cols object. " alt="" coords="868,13,992,39"/>
+</map>

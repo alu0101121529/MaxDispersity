@@ -1,0 +1,322 @@
+\hypertarget{classgreedyAlgorithm}{}\section{greedy\+Algorithm Class Reference}
+\label{classgreedyAlgorithm}\index{greedy\+Algorithm@{greedy\+Algorithm}}
+
+
+Implementation of the greedy algorithm to solve Maximum diversity problem.  
+
+
+
+
+{\ttfamily \#include $<$greedy\+Algorithm.\+hpp$>$}
+
+
+
+Inheritance diagram for greedy\+Algorithm\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classgreedyAlgorithm__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for greedy\+Algorithm\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classgreedyAlgorithm__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgreedyAlgorithm_ad2ec161ba440c1a8f35b26823e37ca6b}{greedy\+Algorithm} (std\+::string filename, int sol)
+\begin{DoxyCompactList}\small\item\em Construct a new greedy \hyperlink{classAlgorithm}{Algorithm} object. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \hyperlink{classgreedyAlgorithm_a37c81600b24a32ae25b6f0eeab643a7a}{execute} ()
+\begin{DoxyCompactList}\small\item\em Method that executes the algorithm. \end{DoxyCompactList}\item 
+std\+::vector$<$ float $>$ \hyperlink{classgreedyAlgorithm_a1ba2f9ae707c3d68f0af86ea320f80cf}{gravity\+Center} (std\+::vector$<$ int $>$)
+\begin{DoxyCompactList}\small\item\em Method that calculates the gravity center. \end{DoxyCompactList}\item 
+int \hyperlink{classgreedyAlgorithm_afb8dddb24fefb88da82011db8c07e17c}{furthest\+Element} (std\+::vector$<$ int $>$, std\+::vector$<$ float $>$)
+\begin{DoxyCompactList}\small\item\em Returns the index of the furthest element to the center. \end{DoxyCompactList}\item 
+float \hyperlink{classgreedyAlgorithm_a523e81ad05f34731d5259e712b0b6ee5}{total\+Distance} (std\+::vector$<$ int $>$)
+\begin{DoxyCompactList}\small\item\em Method that computes the total distance given a solution. \end{DoxyCompactList}\item 
+float \hyperlink{classgreedyAlgorithm_a59dd977d1c232276b8494de999e415d4}{distance\+Two\+Points} (int, int)
+\begin{DoxyCompactList}\small\item\em Calculates the distance between two points. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Implementation of the greedy algorithm to solve Maximum diversity problem. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgreedyAlgorithm_ad2ec161ba440c1a8f35b26823e37ca6b}\label{classgreedyAlgorithm_ad2ec161ba440c1a8f35b26823e37ca6b}} 
+\index{greedy\+Algorithm@{greedy\+Algorithm}!greedy\+Algorithm@{greedy\+Algorithm}}
+\index{greedy\+Algorithm@{greedy\+Algorithm}!greedy\+Algorithm@{greedy\+Algorithm}}
+\subsubsection{\texorpdfstring{greedy\+Algorithm()}{greedyAlgorithm()}}
+{\footnotesize\ttfamily greedy\+Algorithm\+::greedy\+Algorithm (\begin{DoxyParamCaption}\item[{std\+::string}]{filename,  }\item[{int}]{sol }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new greedy \hyperlink{classAlgorithm}{Algorithm} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+31 : \hyperlink{classAlgorithm_a3c199c8528aae86f06ac515d5102fa09}{Algorithm}(filename, sol) \{\}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgreedyAlgorithm_ad2ec161ba440c1a8f35b26823e37ca6b_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classgreedyAlgorithm_a59dd977d1c232276b8494de999e415d4}\label{classgreedyAlgorithm_a59dd977d1c232276b8494de999e415d4}} 
+\index{greedy\+Algorithm@{greedy\+Algorithm}!distance\+Two\+Points@{distance\+Two\+Points}}
+\index{distance\+Two\+Points@{distance\+Two\+Points}!greedy\+Algorithm@{greedy\+Algorithm}}
+\subsubsection{\texorpdfstring{distance\+Two\+Points()}{distanceTwoPoints()}}
+{\footnotesize\ttfamily float greedy\+Algorithm\+::distance\+Two\+Points (\begin{DoxyParamCaption}\item[{int}]{point1,  }\item[{int}]{point2 }\end{DoxyParamCaption})}
+
+
+
+Calculates the distance between two points. 
+
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+70                                                                \{
+71   \textcolor{keywordtype}{float} sum = 0; 
+72   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < graph.\hyperlink{classMatriz_ad6915f9b31f93230a3ce05d01d23a47b}{get\_cols}(); j++) \{
+73     sum += pow(graph[point1][j] - graph[point2][j], 2);
+74   \}
+75   sum = sqrt(sum);
+76   \textcolor{keywordflow}{return} sum;
+77 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgreedyAlgorithm_a59dd977d1c232276b8494de999e415d4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgreedyAlgorithm_a59dd977d1c232276b8494de999e415d4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classgreedyAlgorithm_a37c81600b24a32ae25b6f0eeab643a7a}\label{classgreedyAlgorithm_a37c81600b24a32ae25b6f0eeab643a7a}} 
+\index{greedy\+Algorithm@{greedy\+Algorithm}!execute@{execute}}
+\index{execute@{execute}!greedy\+Algorithm@{greedy\+Algorithm}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ greedy\+Algorithm\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Method that executes the algorithm. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$float$>$ 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAlgorithm_af6ea9eb9a6dbd41896e3fd7dabac096b}{Algorithm}.
+
+
+\begin{DoxyCode}
+4 \{
+5   std::vector<int> Elem;
+6   std::vector<int> solution;
+7   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < graph.\hyperlink{classMatriz_a6b18342f8c083baece693ff41185a206}{get\_rows}(); i++)
+8   \{
+9     Elem.push\_back(i);
+10   \}
+11   std::vector<float> SC = \hyperlink{classgreedyAlgorithm_a1ba2f9ae707c3d68f0af86ea320f80cf}{gravityCenter}(Elem);
+12   \textcolor{keywordflow}{while}(solution.size() != solutionSize) \{
+13     \textcolor{keywordtype}{int} far = \hyperlink{classgreedyAlgorithm_afb8dddb24fefb88da82011db8c07e17c}{furthestElement}(Elem, SC);
+14     solution.push\_back(far);
+15     Elem.erase(std::find(Elem.begin(), Elem.end(), far));
+16     SC = \hyperlink{classgreedyAlgorithm_a1ba2f9ae707c3d68f0af86ea320f80cf}{gravityCenter}(solution);
+17   \}
+18   \textcolor{keywordflow}{return} solution;
+19 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgreedyAlgorithm_a37c81600b24a32ae25b6f0eeab643a7a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgreedyAlgorithm_a37c81600b24a32ae25b6f0eeab643a7a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classgreedyAlgorithm_afb8dddb24fefb88da82011db8c07e17c}\label{classgreedyAlgorithm_afb8dddb24fefb88da82011db8c07e17c}} 
+\index{greedy\+Algorithm@{greedy\+Algorithm}!furthest\+Element@{furthest\+Element}}
+\index{furthest\+Element@{furthest\+Element}!greedy\+Algorithm@{greedy\+Algorithm}}
+\subsubsection{\texorpdfstring{furthest\+Element()}{furthestElement()}}
+{\footnotesize\ttfamily int greedy\+Algorithm\+::furthest\+Element (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{Elem,  }\item[{std\+::vector$<$ float $>$}]{SC }\end{DoxyParamCaption})}
+
+
+
+Returns the index of the furthest element to the center. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+33                                                                              \{
+34   \textcolor{keywordtype}{float} distance = 0;
+35   \textcolor{keywordtype}{int} solution = 0;
+36   std::vector<int> repetidos;
+37   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < Elem.size(); i++) \{
+38     \textcolor{keywordtype}{float} sum = 0;
+39     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < graph.\hyperlink{classMatriz_ad6915f9b31f93230a3ce05d01d23a47b}{get\_cols}(); j++) \{
+40       sum += pow(SC[j] - graph[Elem[i]][j], 2);
+41     \}
+42     sum = sqrt(sum);
+43     \textcolor{keywordflow}{if}(sum > distance) \{
+44       distance = sum;
+45       solution = Elem[i];
+46       repetidos.clear();
+47       repetidos.push\_back(Elem[i]);
+48     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(sum == distance) \{
+49       repetidos.push\_back(Elem[i]);
+50     \}
+51   \}
+52   \textcolor{keywordflow}{if}(repetidos.size() > 1) \{
+53     \textcolor{keywordtype}{int} index = std::rand() % repetidos.size();
+54     \textcolor{keywordflow}{return} repetidos[index];
+55   \}
+56   \textcolor{keywordflow}{return} solution;
+57 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgreedyAlgorithm_afb8dddb24fefb88da82011db8c07e17c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgreedyAlgorithm_afb8dddb24fefb88da82011db8c07e17c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classgreedyAlgorithm_a1ba2f9ae707c3d68f0af86ea320f80cf}\label{classgreedyAlgorithm_a1ba2f9ae707c3d68f0af86ea320f80cf}} 
+\index{greedy\+Algorithm@{greedy\+Algorithm}!gravity\+Center@{gravity\+Center}}
+\index{gravity\+Center@{gravity\+Center}!greedy\+Algorithm@{greedy\+Algorithm}}
+\subsubsection{\texorpdfstring{gravity\+Center()}{gravityCenter()}}
+{\footnotesize\ttfamily std\+::vector$<$ float $>$ greedy\+Algorithm\+::gravity\+Center (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{Elem }\end{DoxyParamCaption})}
+
+
+
+Method that calculates the gravity center. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$float$>$ 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+21                                                                    \{
+22   std::vector<float> solution;
+23   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < graph.\hyperlink{classMatriz_ad6915f9b31f93230a3ce05d01d23a47b}{get\_cols}(); i++) \{
+24     \textcolor{keywordtype}{float} sum = 0;
+25     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < Elem.size(); j++) \{      
+26       sum += graph[Elem[j]][i]; 
+27     \}
+28     solution.push\_back(sum / Elem.size());
+29   \}
+30   \textcolor{keywordflow}{return} solution;
+31 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{classgreedyAlgorithm_a1ba2f9ae707c3d68f0af86ea320f80cf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgreedyAlgorithm_a1ba2f9ae707c3d68f0af86ea320f80cf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classgreedyAlgorithm_a523e81ad05f34731d5259e712b0b6ee5}\label{classgreedyAlgorithm_a523e81ad05f34731d5259e712b0b6ee5}} 
+\index{greedy\+Algorithm@{greedy\+Algorithm}!total\+Distance@{total\+Distance}}
+\index{total\+Distance@{total\+Distance}!greedy\+Algorithm@{greedy\+Algorithm}}
+\subsubsection{\texorpdfstring{total\+Distance()}{totalDistance()}}
+{\footnotesize\ttfamily float greedy\+Algorithm\+::total\+Distance (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{solution }\end{DoxyParamCaption})}
+
+
+
+Method that computes the total distance given a solution. 
+
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+60                                                             \{
+61   \textcolor{keywordtype}{float} sum = 0;
+62   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < solution.size(); i++) \{
+63     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = i + 1; j < solution.size(); j++) \{
+64       sum += \hyperlink{classgreedyAlgorithm_a59dd977d1c232276b8494de999e415d4}{distanceTwoPoints}(solution[i], solution[j]);
+65     \}
+66   \}
+67   \textcolor{keywordflow}{return} sum;
+68 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgreedyAlgorithm_a523e81ad05f34731d5259e712b0b6ee5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgreedyAlgorithm_a523e81ad05f34731d5259e712b0b6ee5_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{greedyAlgorithm_8hpp}{greedy\+Algorithm.\+hpp}\item 
+src/greedy\+Algorithm.\+cpp\end{DoxyCompactItemize}
